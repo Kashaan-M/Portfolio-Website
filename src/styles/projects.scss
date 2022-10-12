@@ -1,0 +1,34 @@
+#projects {
+  @include flex-center(row);
+}
+.projects-wrapper {
+  @extend .certificates-wrapper;
+}
+.projects-text {
+  @extend .certificates-text;
+}
+.projects-container {
+  @extend .certificates-container;
+}
+.card {
+  @extend .certificate;
+  padding: 0.5rem;
+
+  & a {
+    @include flex-center(column);
+
+    & img {
+      @extend .certificate-img;
+    }
+  }
+  &-text {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
+}
+
+@include media-sm {
+  .projects-text {
+    font-size: 1.5rem;
+  }
+}

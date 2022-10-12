@@ -1,0 +1,40 @@
+#certificates {
+  @include flex-center(row);
+}
+.certificates-wrapper {
+  width: 90vw;
+  height: auto;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.certificates-text {
+  text-align: center;
+  font-size: 2rem;
+  opacity: 0.7;
+}
+.certificates-container {
+  margin-top: 3rem;
+  @include flex-center(row);
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.certificate {
+  @include flex-center(column);
+  box-shadow: $dark-shadow;
+  &-img {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+  }
+  &:hover {
+    border: 2px solid $clr-blue-dark;
+  }
+}
+@include media-sm {
+  .certificates-text {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,76 @@
+// .toggle-theme
+// ul > li > input[type="checkbox" id="power"] > label > span.dark + span.light
+
+// toggle light dark theme
+.toggle-theme {
+  margin: 0 1rem 0 1.5rem;
+  margin-bottom: 0.3rem;
+  max-height: 47px;
+  // display: none;
+  & ul li {
+    width: 150px;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    position: relative;
+  }
+}
+
+.toggle-theme > ul > li > label {
+  width: 75px;
+  height: 20px;
+  line-height: 20px;
+  position: relative;
+
+  & > span {
+    position: absolute;
+    font-size: 0.8rem;
+  }
+}
+
+input[type='checkbox'] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 44px;
+  height: 24px;
+  border-radius: 12px;
+  border: 2px solid $clr-black;
+  background: transparent;
+  transition: all 0.4s;
+
+  &::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    background: $clr-black;
+    position: absolute;
+    border-radius: 9px;
+    top: 4px;
+    left: 6px;
+    transition: all 0.4s;
+  }
+  &:checked {
+    background-color: transparent;
+    border: 2px solid $clr-grey-10;
+    transition: all 0.4s;
+
+    &::before {
+      background: $clr-grey-10;
+      left: 22px;
+    }
+  }
+  & ~ label .dark,
+  &:checked ~ label .light {
+    opacity: 0;
+  }
+  & ~ label .light,
+  &:checked ~ label .dark {
+    opacity: 1;
+  }
+  &:focus {
+    outline: 1px dotted $clr-black;
+  }
+  &:checked:focus {
+    outline: 1px dotted $clr-grey-10;
+  }
+}

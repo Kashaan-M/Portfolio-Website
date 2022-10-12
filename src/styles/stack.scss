@@ -1,0 +1,17 @@
+#stack {
+  @include flex-center(row);
+}
+.stack-wrapper {
+  @extend .certificates-wrapper;
+}
+.stack-text {
+  @extend .certificates-text;
+}
+.stack-container {
+  @extend .certificates-container;
+}
+@include media-sm {
+  .stack-text {
+    font-size: 1.5rem;
+  }
+}
