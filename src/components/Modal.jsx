@@ -3,14 +3,13 @@ import { useGlobalContext } from '../context';
 import closeBtn from '../assets/x-lg.svg';
 
 export default function Modal() {
-  const { isModalOpen, closeModal, submitter, disabled } = useGlobalContext();
+  const { isModalOpen, closeModal, disabled, setDisabled } = useGlobalContext();
 
   return (
     <>
       <article
         className={isModalOpen ? 'show-modal modal-overlay' : 'modal-overlay'}
       >
-        {/* {isSubmitted && <Success />} */}
         <div className="modal-container">
           <div className="modal-header">
             <h4 className="modal-header-text">Write your message</h4>
@@ -19,13 +18,17 @@ export default function Modal() {
             </button>
           </div>
           <div className="modal-body">
-            <form name="Messages" method="POST" data-netlify="true">
+            <form
+              name="Messages"
+              method="POST"
+              data-netlify="true"
+              onSubmit={setDisabled(true)}
+            >
               <input type="hidden" name="form-name" value="Messages" />
               <label htmlFor="Name">Your Name</label>
               <input
                 type="text"
                 name="Name"
-                value={submitter}
                 id="Name"
                 maxLength="20"
                 required
