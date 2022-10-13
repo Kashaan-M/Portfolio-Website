@@ -1,34 +1,19 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useGlobalContext } from '../context';
 import closeBtn from '../assets/x-lg.svg';
-import Success from './Success';
 
 export default function Modal() {
   const {
     isModalOpen,
     closeModal,
-    isSubmitted,
     setIsSubmitted,
     submitter,
-    setSubmitter,
+    submitterName,
     disabled,
     setDisabled,
   } = useGlobalContext();
 
-  useEffect(() => {
-    if (isSubmitted) {
-      let timeout = setTimeout(() => {
-        setIsSubmitted(false);
-      }, 6000);
-
-      return () => {
-        clearTimeout(timeout);
-      };
-    }
-  }, [isSubmitted, setIsSubmitted]);
-
   const handleSubmit = (e) => {
-    e.preventDefault();
     setIsSubmitted(true);
     setDisabled(true);
   };
@@ -38,7 +23,7 @@ export default function Modal() {
       <article
         className={isModalOpen ? 'show-modal modal-overlay' : 'modal-overlay'}
       >
-        {isSubmitted && <Success />}
+        {/* {isSubmitted && <Success />} */}
         <div className="modal-container">
           <div className="modal-header">
             <h4 className="modal-header-text">Write your message</h4>
@@ -48,12 +33,13 @@ export default function Modal() {
           </div>
           <div className="modal-body">
             <form
-              method="POST"
               name="Messages"
+              action="/success"
+              method="POST"
               data-netlify="true"
               onSubmit={handleSubmit}
             >
-              <input type="hidden" name="form-name" value="Messages"  />
+              <input type="hidden" name="form-name" value="Messages" />
               <label htmlFor="Name">Your Name</label>
               <input
                 type="text"
@@ -62,7 +48,7 @@ export default function Modal() {
                 id="Name"
                 maxLength="20"
                 required
-                onChange={(e) => setSubmitter(e.target.value)}
+                onChange={(e) => submitterName(e.target.value)}
                 disabled={disabled}
               />
               <label htmlFor="Email">Your Email</label>

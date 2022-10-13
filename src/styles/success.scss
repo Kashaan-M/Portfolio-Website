@@ -1,10 +1,16 @@
+.alert-wrapper {
+  @include flex-center(row);
+  width: 80vw;
+  margin: 0 auto;
+}
+
 .alert-container {
   background: $clr-white;
   border: 2px solid $clr-primary-6;
   border-radius: 4px;
   @include flex-center(column);
   color: $clr-black;
-  width: 25rem;
+  width: 100%;
   text-align: center;
 
   p {
