@@ -3,20 +3,7 @@ import { useGlobalContext } from '../context';
 import closeBtn from '../assets/x-lg.svg';
 
 export default function Modal() {
-  const {
-    isModalOpen,
-    closeModal,
-    setIsSubmitted,
-    submitter,
-    setSubmitter,
-    disabled,
-    setDisabled,
-  } = useGlobalContext();
-
-  const handleSubmit = (e) => {
-    setIsSubmitted(true);
-    setDisabled(true);
-  };
+  const { isModalOpen, closeModal, submitter, disabled } = useGlobalContext();
 
   return (
     <>
@@ -32,13 +19,7 @@ export default function Modal() {
             </button>
           </div>
           <div className="modal-body">
-            <form
-              name="Messages"
-              action="/#/success"
-              method="POST"
-              data-netlify="true"
-              onSubmit={handleSubmit}
-            >
+            <form name="Messages" method="POST" data-netlify="true">
               <input type="hidden" name="form-name" value="Messages" />
               <label htmlFor="Name">Your Name</label>
               <input
@@ -48,10 +29,6 @@ export default function Modal() {
                 id="Name"
                 maxLength="20"
                 required
-                onChange={(e) => {
-                  localStorage.setItem('name', e.target.value);
-                  setSubmitter(e.target.value);
-                }}
                 disabled={disabled}
               />
               <label htmlFor="Email">Your Email</label>
