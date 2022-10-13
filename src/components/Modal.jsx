@@ -53,22 +53,23 @@ export default function Modal() {
               data-netlify="true"
               onSubmit={handleSubmit}
             >
-              <label htmlFor="clientName">Your Name</label>
+              <input type="hidden" name="form-name" value="Messages"  />
+              <label htmlFor="Name">Your Name</label>
               <input
                 type="text"
-                name="clientName"
+                name="Name"
                 value={submitter}
-                id="clientName"
+                id="Name"
                 maxLength="20"
                 required
                 onChange={(e) => setSubmitter(e.target.value)}
                 disabled={disabled}
               />
-              <label htmlFor="clientEmail">Your Email</label>
+              <label htmlFor="Email">Your Email</label>
               <input
                 type="email"
-                name="clientEmail"
-                id="clientEmail"
+                name="Email"
+                id="Email"
                 required
                 aria-describedby="emailHelp"
                 disabled={disabled}
@@ -76,10 +77,10 @@ export default function Modal() {
               <div id="emailHelp">
                 Your Email won't get shared with anyone else
               </div>
-              <label htmlFor="clientMessage">Your Message</label>
+              <label htmlFor="Message">Your Message</label>
               <textarea
-                name="clientMessage"
-                id="clientMessage"
+                name="Message"
+                id="Message"
                 rows="3"
                 style={{ resize: 'none' }}
                 required

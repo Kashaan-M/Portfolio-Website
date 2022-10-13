@@ -13,6 +13,16 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <!-- A little help for the Netlify bots if you're not using a SSG -->
+    <form name="messages" netlify netlify-honeypot="bot-field" hidden>
+      <label for="Name">Your Name</label>
+      <input type="text" name="Name" />
+      <label for="Email">Your Email</label>
+      <input type="email" name="Email" />
+      <label for="Message">Your Message</label>
+      <textarea name="Message"></textarea>
+    </form>
     <div id="root"></div>
   </body>
 </html>
