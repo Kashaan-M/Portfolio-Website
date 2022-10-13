@@ -8,7 +8,7 @@ export default function Modal() {
     closeModal,
     setIsSubmitted,
     submitter,
-    submitterName,
+    setSubmitter,
     disabled,
     setDisabled,
   } = useGlobalContext();
@@ -48,7 +48,10 @@ export default function Modal() {
                 id="Name"
                 maxLength="20"
                 required
-                onChange={(e) => submitterName(e.target.value)}
+                onChange={(e) => {
+                  localStorage.setItem('name', e.target.value);
+                  setSubmitter(e.target.value);
+                }}
                 disabled={disabled}
               />
               <label htmlFor="Email">Your Email</label>

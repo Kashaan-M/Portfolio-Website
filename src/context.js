@@ -22,10 +22,6 @@ const AppProvider = ({ children }) => {
   const closeModal = () => {
     setIsModalOpen(false);
   };
-  const submitterName = ({ name }) => {
-    localStorage.setItem('name', name);
-    setSubmitter(localStorage.getItem('name'));
-  };
 
   return (
     <AppContext.Provider
@@ -41,7 +37,7 @@ const AppProvider = ({ children }) => {
         isSubmitted,
         setIsSubmitted,
         submitter,
-        submitterName,
+        setSubmitter,
         disabled,
         setDisabled,
       }}
