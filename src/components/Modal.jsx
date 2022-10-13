@@ -34,7 +34,7 @@ export default function Modal() {
           <div className="modal-body">
             <form
               name="Messages"
-              action="/success"
+              action="/#/success"
               method="POST"
               data-netlify="true"
               onSubmit={handleSubmit}
