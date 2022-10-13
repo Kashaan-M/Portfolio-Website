@@ -4,7 +4,7 @@ import { useGlobalContext } from '../context';
 import Modal from './Modal';
 
 export default function About() {
-  const { light, isModalOpen, openModal, disabled } = useGlobalContext();
+  const { light, isModalOpen, openModal } = useGlobalContext();
   return (
     <section className="about">
       <article className="about-intro-wrapper">
@@ -25,17 +25,8 @@ export default function About() {
         </div>
         <div className="about-modal">
           <button
-            className={
-              light & disabled
-                ? 'disabled-btn modal-light-btn'
-                : light & !disabled
-                ? 'modal-light-btn'
-                : !light & disabled
-                ? 'disabled-btn-dark modal-dark-btn'
-                : 'modal-dark-btn'
-            }
+            className={light ? ' modal-light-btn' : 'modal-dark-btn'}
             onClick={openModal}
-            disabled={disabled}
           >
             Message Me
           </button>

@@ -3,7 +3,7 @@ import { useGlobalContext } from '../context';
 import closeBtn from '../assets/x-lg.svg';
 
 export default function Modal() {
-  const { isModalOpen, closeModal, disabled, setDisabled } = useGlobalContext();
+  const { isModalOpen, closeModal } = useGlobalContext();
 
   return (
     <>
@@ -18,12 +18,7 @@ export default function Modal() {
             </button>
           </div>
           <div className="modal-body">
-            <form
-              name="Messages"
-              method="POST"
-              data-netlify="true"
-              onSubmit={setDisabled(true)}
-            >
+            <form name="Messages" method="POST" data-netlify="true">
               <input type="hidden" name="form-name" value="Messages" />
               <label htmlFor="Name">Your Name</label>
               <input
@@ -32,7 +27,6 @@ export default function Modal() {
                 id="Name"
                 maxLength="20"
                 required
-                disabled={disabled}
               />
               <label htmlFor="Email">Your Email</label>
               <input
@@ -41,7 +35,6 @@ export default function Modal() {
                 id="Email"
                 required
                 aria-describedby="emailHelp"
-                disabled={disabled}
               />
               <div id="emailHelp">
                 Your Email won't get shared with anyone else
@@ -53,15 +46,8 @@ export default function Modal() {
                 rows="3"
                 style={{ resize: 'none' }}
                 required
-                disabled={disabled}
               ></textarea>
-              <button
-                type="submit"
-                className={
-                  disabled ? 'disabled-btn modal-light-btn' : 'modal-light-btn'
-                }
-                disabled={disabled}
-              >
+              <button type="submit" className="modal-light-btn">
                 Send
               </button>
             </form>

@@ -124,19 +124,3 @@
     height: calc(100vh + 25rem);
   }
 }
-
-.disabled-btn {
-  background: $clr-grey-8;
-  &:hover {
-    background: $clr-grey-8;
-    color: $clr-grey-10;
-  }
-  &-dark {
-    background: $clr-grey-8;
-    color: $clr-grey-10;
-    &:hover {
-      background: $clr-grey-8;
-      color: $clr-grey-10;
-    }
-  }
-}

@@ -6,9 +6,6 @@ const AppProvider = ({ children }) => {
   const [light, setLight] = useState(true);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [submitter, setSubmitter] = useState('');
-  const [disabled, setDisabled] = useState(false);
 
   const openSidebar = () => {
     setIsSidebarOpen(true);
@@ -34,12 +31,6 @@ const AppProvider = ({ children }) => {
         isModalOpen,
         openModal,
         closeModal,
-        isSubmitted,
-        setIsSubmitted,
-        submitter,
-        setSubmitter,
-        disabled,
-        setDisabled,
       }}
     >
       {children}
