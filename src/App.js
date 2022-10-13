@@ -8,6 +8,7 @@ import Stack from './components/TechStack';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Error from './components/Error';
+import success from './components/Success';
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/stack" element={<Stack />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/success" element={<success />} />
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />

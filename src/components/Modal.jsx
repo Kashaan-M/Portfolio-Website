@@ -21,6 +21,7 @@ export default function Modal() {
             <form
               name="Messages"
               method="POST"
+              action="/#/success"
               data-netlify="true"
               onSubmit="submit"
             >
