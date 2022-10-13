@@ -18,7 +18,12 @@ export default function Modal() {
             </button>
           </div>
           <div className="modal-body">
-            <form name="Messages" method="POST" data-netlify="true">
+            <form
+              name="Messages"
+              method="POST"
+              data-netlify="true"
+              onSubmit="submit"
+            >
               <input type="hidden" name="form-name" value="Messages" />
               <label htmlFor="Name">Your Name</label>
               <input
