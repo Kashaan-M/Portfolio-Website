@@ -13,14 +13,28 @@ export default function Theme({ sidebar }) {
         <ul>
           <li>
             <input
-              type="checkbox"
-              name="power"
-              id="power"
+              type='checkbox'
+              name='theme'
+              id='theme'
               onClick={() => setLight(!light)}
             />
-            <label htmlFor="power">
-              <span className="dark">Dark Theme</span>
-              <span className="light">Light Theme</span>
+            <label htmlFor='theme'>
+              <span
+                className='dark'
+                role='menuitemcheckbox'
+                aria-checked='true'
+                aria-label='dark theme'
+              >
+                Dark Theme
+              </span>
+              <span
+                className='light'
+                role='menuitemcheckbox'
+                aria-checked='false'
+                aria-label='light theme'
+              >
+                Light Theme
+              </span>
             </label>
           </li>
         </ul>

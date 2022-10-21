@@ -15,17 +15,17 @@ import { projects } from '../data';
 export default function Projects() {
   return (
     <>
-      <section id="projects">
-        <article className="projects-wrapper">
-          <h2 className="projects-text">Projects I've built</h2>
-          <div className="projects-container">
+      <section id='projects' role='region' aria-label='projects'>
+        <article className='projects-wrapper'>
+          <h2 className='projects-text'>Projects I've built</h2>
+          <div className='projects-container'>
             {projects.map((project) => {
               const { id, text, url, img } = project;
               return (
-                <div className="card" key={id}>
+                <div className='card' key={id}>
                   <a href={url}>
-                    <img src={img} alt={text} className="card-img" />
-                    <h4 className="card-text">{text}</h4>
+                    <img src={img} alt={text} className='card-img' />
+                    <h4 className='card-text'>{text}</h4>
                   </a>
                 </div>
               );

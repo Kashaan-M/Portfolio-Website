@@ -10,21 +10,21 @@ const contactImg = [linkedin, github, envelope, telephone];
 export default function Contact() {
   return (
     <>
-      <section id="contact">
-        <article className="contact-wrapper">
-          <h2 className="contact-text">Contact Me</h2>
-          <div className="contact-container">
+      <section id='contact' role='region' aria-label='Contact me'>
+        <article className='contact-wrapper'>
+          <h2 className='contact-text'>Contact Me</h2>
+          <div className='contact-container'>
             {contact.map((platform) => {
               const { id, text, url } = platform;
               return (
-                <div className="card" key={id}>
+                <div className='card' key={id}>
                   <a href={url}>
                     <img
                       src={contactImg[id]}
-                      alt={text}
-                      className="contact-card-img"
+                      className='contact-card-img'
+                      alt=''
                     />
-                    <h4 className="card-text">{text}</h4>
+                    <h4 className='card-text'>{text}</h4>
                   </a>
                 </div>
               );

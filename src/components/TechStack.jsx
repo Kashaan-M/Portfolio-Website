@@ -41,23 +41,23 @@ const stack = [
 export default function Stack() {
   return (
     <>
-      <section id="stack">
-        <article className="stack-wrapper">
-          <h2 className="stack-text">Technology I Use Regularly</h2>
-          <div className="stack-container">
+      <section id='stack' role='region' aria-label='Technology I use'>
+        <article className='stack-wrapper'>
+          <h2 className='stack-text'>Technology I Use Regularly</h2>
+          <div className='stack-container'>
             {techStack.map((tech) => {
               const { id, text } = tech;
 
               return (
-                <div className="card" key={id}>
+                <div className='card' key={id}>
                   <img
                     src={stack[id]}
                     alt={text}
-                    className="card-img"
+                    className='card-img'
                     width={200}
                     height={200}
                   />
-                  <h4 className="card-text">{text}</h4>
+                  <h4 className='card-text'>{text}</h4>
                 </div>
               );
             })}
