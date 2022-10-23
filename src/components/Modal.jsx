@@ -98,6 +98,7 @@ export default function Modal() {
               name='ClientMessages'
               method='POST'
               action='/success'
+              onSubmit={(e) => handleSubmit(e)}
               netlify
               ref={formRef}
             >
