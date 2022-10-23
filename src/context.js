@@ -6,8 +6,7 @@ const AppProvider = ({ children }) => {
   const [light, setLight] = useState(true);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(true);
-  const [submitter, setSubmitter] = useState('Kashaan');
+  const [submitter, setSubmitter] = useState('');
   const [showAlert, setShowAlert] = useState(false);
 
   const openSidebar = () => {
@@ -34,8 +33,6 @@ const AppProvider = ({ children }) => {
         isModalOpen,
         openModal,
         closeModal,
-        isSubmitted,
-        setIsSubmitted,
         submitter,
         setSubmitter,
         showAlert,

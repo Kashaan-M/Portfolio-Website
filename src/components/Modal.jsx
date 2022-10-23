@@ -7,7 +7,6 @@ export default function Modal() {
   const {
     isModalOpen,
     closeModal,
-    setIsSubmitted,
     submitter,
     setSubmitter,
     showAlert,
@@ -33,7 +32,6 @@ export default function Modal() {
       body: new URLSearchParams(formData).toString(),
     })
       .then((response) => {
-        setIsSubmitted(true);
         console.log('Form Successfully Submitted');
       })
       .catch((error) => console.log(error));
@@ -45,7 +43,7 @@ export default function Modal() {
     }, 4000);
 
     return () => clearTimeout(timeout);
-  }, []);
+  }, [showAlert]);
 
   return (
     <>
