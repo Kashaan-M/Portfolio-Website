@@ -24,14 +24,6 @@ export default function Modal() {
   const messageRef = useRef();
   const btnRef = useRef();
 
-  useEffect(() => {
-    const form = formRef.current;
-    form.addEventListener('submit', handleSubmit);
-    return () => {
-      form.removeEventListener('submit', handleSubmit);
-    };
-  }, []);
-
   const encode = (data) => {
     return Object.keys(data)
       .map(
