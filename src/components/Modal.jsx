@@ -42,6 +42,7 @@ export default function Modal() {
       .then((response) => {
         setIsSubmitted(true);
         console.log('Form Successfully Submitted');
+        console.log(response.formData);
       })
       .catch((error) => console.log(error));
   };
@@ -78,7 +79,8 @@ export default function Modal() {
             <form
               name='ClientMessages'
               method='POST'
-              data-netlify='true'
+              action='/success'
+              netlify
               ref={formRef}
             >
               <input type='hidden' name='form-name' value='ClientMessages' />

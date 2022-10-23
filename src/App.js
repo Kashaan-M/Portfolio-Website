@@ -19,6 +19,7 @@ export default function App() {
         <Route path='/projects' element={<Projects />} />
         <Route path='/stack' element={<Stack />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/success' element={<About />} />
         <Route path='*' element={<Error />} />
       </Routes>
       <Footer />

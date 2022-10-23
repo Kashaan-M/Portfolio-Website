@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.061e9abf.css",
-    "main.js": "./static/js/main.7d6e4b00.js",
+    "main.js": "./static/js/main.9e7ea68f.js",
     "static/media/Python-for-Everybody.png": "./static/media/Python-for-Everybody.00e3c162f549975136ef.png",
     "static/media/technical-documentation-page.png": "./static/media/technical-documentation-page.3820071ac468f7eaf6cd.png",
     "static/media/hero-optimized.svg": "./static/media/hero-optimized.f2e9d8aa51bd7e1338ba813495a9b13e.svg",
@@ -26,8 +26,8 @@
     "static/media/nodejs-original.svg": "./static/media/nodejs-original.8bae75f411b0a02e3ba49967b2c120cb.svg",
     "static/media/vim-plain.svg": "./static/media/vim-plain.cfbba77a669a9bd4e3c503ef24db63f1.svg",
     "static/media/javascript-original.svg": "./static/media/javascript-original.b13a1c9aaf5f88c6e67c2ad6c9f407a3.svg",
-    "static/media/telephone.svg": "./static/media/telephone.13b7a69a7075bbd7e6f6e5357f140fff.svg",
     "index.html": "./index.html",
+    "static/media/telephone.svg": "./static/media/telephone.13b7a69a7075bbd7e6f6e5357f140fff.svg",
     "static/media/css3-original.svg": "./static/media/css3-original.457bad5908acff4429c4746afeef096a.svg",
     "static/media/git-original.svg": "./static/media/git-original.15e997539a868f0cdc9d7820d8473b34.svg",
     "static/media/vscode-original.svg": "./static/media/vscode-original.a319d530c8bedabaa07980ce66dd7d08.svg",
@@ -39,10 +39,10 @@
     "static/media/npm-original-wordmark.svg": "./static/media/npm-original-wordmark.8ced62565fa176ca792d5ceab67e9a04.svg",
     "static/media/x-lg.svg": "./static/media/x-lg.f520e54c746f7505bec401e45a68a2de.svg",
     "main.061e9abf.css.map": "./static/css/main.061e9abf.css.map",
-    "main.7d6e4b00.js.map": "./static/js/main.7d6e4b00.js.map"
+    "main.9e7ea68f.js.map": "./static/js/main.9e7ea68f.js.map"
   },
   "entrypoints": [
     "static/css/main.061e9abf.css",
-    "static/js/main.7d6e4b00.js"
+    "static/js/main.9e7ea68f.js"
   ]
 }
