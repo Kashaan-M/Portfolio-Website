@@ -11,6 +11,10 @@ export default function Modal() {
     setIsSubmitted,
     submitter,
     setSubmitter,
+    submitterEmail,
+    setSubmitterEmail,
+    submitterMessage,
+    setSubmitterMessage,
     showAlert,
     setShowAlert,
   } = useGlobalContext();
@@ -28,6 +32,13 @@ export default function Modal() {
     };
   }, []);
 
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+      )
+      .join('&');
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitted(true);
@@ -41,7 +52,12 @@ export default function Modal() {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData).toString(),
+      body: encode({
+        'form-name': 'ClientMessages',
+        name: submitter,
+        email: submitterEmail,
+        message: submitterMessage,
+      }),
     })
       .then((response) => {
         console.log('Form Successfully Submitted');
@@ -86,22 +102,24 @@ export default function Modal() {
               ref={formRef}
             >
               <input type='hidden' name='form-name' value='ClientMessages' />
-              <label htmlFor='userName'>Your Name</label>
+              <label htmlFor='name'>Your Name</label>
               <input
                 type='text'
                 value={submitter}
-                name='userName'
-                id='userName'
+                name='name'
+                id='name'
                 maxLength='20'
                 onChange={(e) => setSubmitter(e.target.value)}
                 ref={nameRef}
                 required
               />
-              <label htmlFor='userEmail'>Your Email</label>
+              <label htmlFor='email'>Your Email</label>
               <input
                 type='email'
-                name='userEmail'
-                id='userEmail'
+                name='email'
+                value={submitterEmail}
+                id='email'
+                onChange={(e) => setSubmitterEmail(e.target.value)}
                 required
                 ref={emailRef}
                 aria-describedby='emailHelp'
@@ -109,10 +127,12 @@ export default function Modal() {
               <div id='emailHelp'>
                 Your Email won't get shared with anyone else
               </div>
-              <label htmlFor='userMessage'>Your Message</label>
+              <label htmlFor='message'>Your Message</label>
               <textarea
-                name='userMessage'
-                id='userMessage'
+                name='message'
+                value={submitterMessage}
+                id='message'
+                onChange={(e) => setSubmitterMessage(e.target.value)}
                 rows='3'
                 style={{ resize: 'none' }}
                 ref={messageRef}

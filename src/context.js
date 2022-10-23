@@ -9,6 +9,8 @@ const AppProvider = ({ children }) => {
   const [clicked, setClicked] = useState(0);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [submitter, setSubmitter] = useState('');
+  const [submitterEmail, setSubmitterEmail] = useState('');
+  const [submitterMessage, setSubmitterMessage] = useState('');
   const [showAlert, setShowAlert] = useState(false);
   const [disable, setDisable] = useState(false);
 
@@ -41,6 +43,10 @@ const AppProvider = ({ children }) => {
         setClicked,
         submitter,
         setSubmitter,
+        submitterEmail,
+        setSubmitterEmail,
+        submitterMessage,
+        setSubmitterMessage,
         showAlert,
         setShowAlert,
         disable,
