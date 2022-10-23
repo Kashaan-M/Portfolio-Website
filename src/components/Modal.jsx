@@ -40,17 +40,6 @@ export default function Modal() {
       .join('&');
   };
   const handleSubmit = (e) => {
-    const user = submitter;
-    const userEmail = submitterEmail;
-    const userMessage = submitterMessage;
-    console.log(
-      'user,userEmail,userMessage ',
-      user,
-      ' ',
-      userEmail,
-      ' ',
-      userMessage
-    );
     e.preventDefault();
     setIsSubmitted(true);
     disableSubmission();
@@ -65,9 +54,9 @@ export default function Modal() {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
         'form-name': 'ClientMessages',
-        name: user,
-        email: userEmail,
-        message: userMessage,
+        name: 'Ali',
+        email: 'Azmat',
+        message: 'Aloha',
       }),
     })
       .then((response) => {
