@@ -15,7 +15,12 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
 
     <!-- A little help for the Netlify bots if you're not using a SSG -->
-    <form name="Messages" netlify netlify-honeypot="bot-field" hidden>
+    <form
+      name="ClientMessages"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      hidden
+    >
       <label for="Name">Your Name</label>
       <input type="text" name="Name" />
       <label for="Email">Your Email</label>
