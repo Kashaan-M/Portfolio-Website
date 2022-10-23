@@ -40,6 +40,17 @@ export default function Modal() {
       .join('&');
   };
   const handleSubmit = (e) => {
+    const user = submitter;
+    const userEmail = submitterEmail;
+    const userMessage = submitterMessage;
+    console.log(
+      'user,userEmail,userMessage ',
+      user,
+      ' ',
+      userEmail,
+      ' ',
+      userMessage
+    );
     e.preventDefault();
     setIsSubmitted(true);
     disableSubmission();
@@ -54,9 +65,9 @@ export default function Modal() {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
         'form-name': 'ClientMessages',
-        name: submitter,
-        email: submitterEmail,
-        message: submitterMessage,
+        name: user,
+        email: userEmail,
+        message: userMessage,
       }),
     })
       .then((response) => {
@@ -98,6 +109,7 @@ export default function Modal() {
               name='ClientMessages'
               method='POST'
               action='/success'
+              onSubmit={(e) => handleSubmit(e)}
               netlify
               ref={formRef}
             >
