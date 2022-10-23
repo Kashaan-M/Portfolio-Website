@@ -48,13 +48,11 @@ export default function Modal() {
   };
 
   useEffect(() => {
-    if (showAlert) {
-      let timeout = setTimeout(() => {
-        setShowAlert(false);
-      }, 4000);
+    let timeout = setTimeout(() => {
+      setShowAlert(false);
+    }, 4000);
 
-      return () => clearTimeout(timeout);
-    }
+    return () => clearTimeout(timeout);
   }, [showAlert]);
 
   const disableSubmission = () => {
