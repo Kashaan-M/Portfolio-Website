@@ -24,7 +24,8 @@ export default function Modal() {
     if (isSubmitted) {
       const myForm = formRef.current;
       const formData = new FormData(myForm);
-      console.log('formData ', formData);
+      const dataValues = [...formData.entries];
+      console.log('formData ', dataValues);
       // using fetch API to send form data to Netlify
       fetch('/', {
         method: 'POST',
