@@ -31,8 +31,9 @@ export default function Modal() {
     e.preventDefault();
     disableSubmission();
     setShowAlert(true);
-    const myForm = e.target;
+    const myForm = formRef.current;
     const formData = new FormData(myForm);
+    console.log('formData ', [...formData.entries]);
     // using fetch API to send form data to Netlify
     fetch('/', {
       method: 'POST',
@@ -42,17 +43,18 @@ export default function Modal() {
       .then((response) => {
         setIsSubmitted(true);
         console.log('Form Successfully Submitted');
-        console.log(response.formData);
       })
       .catch((error) => console.log(error));
   };
 
   useEffect(() => {
-    let timeout = setTimeout(() => {
-      setShowAlert(false);
-    }, 4000);
+    if (showAlert) {
+      let timeout = setTimeout(() => {
+        setShowAlert(false);
+      }, 4000);
 
-    return () => clearTimeout(timeout);
+      return () => clearTimeout(timeout);
+    }
   }, [showAlert]);
 
   const disableSubmission = () => {
