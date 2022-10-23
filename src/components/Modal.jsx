@@ -25,7 +25,7 @@ export default function Modal() {
     form.addEventListener('submit', handleSubmit);
 
     return () => form.removeEventListener('submit', handleSubmit);
-  }, [isSubmitted]);
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -33,6 +33,7 @@ export default function Modal() {
     disableSubmission();
     const myForm = e.target;
     const formData = new FormData(myForm);
+    // using fetch API to send form data to Netlify
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -51,7 +52,7 @@ export default function Modal() {
     }, 4000);
 
     return () => clearTimeout(timeout);
-  }, [showAlert]);
+  }, []);
 
   const disableSubmission = () => {
     nameRef.current.disabled = true;
