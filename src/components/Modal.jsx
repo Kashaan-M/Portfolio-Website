@@ -21,30 +21,28 @@ export default function Modal() {
   const btnRef = useRef();
 
   useEffect(() => {
-    const form = formRef.current;
-    form.addEventListener('submit', handleSubmit);
-
-    return () => form.removeEventListener('submit', handleSubmit);
+    if (isSubmitted) {
+      const myForm = formRef.current;
+      const formData = new FormData(myForm);
+      console.log('formData ', formData);
+      // using fetch API to send form data to Netlify
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString(),
+      })
+        .then((response) => {
+          console.log('Form Successfully Submitted');
+        })
+        .catch((error) => console.log(error));
+    }
   }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsSubmitted(true);
     disableSubmission();
     setShowAlert(true);
-    const myForm = formRef.current;
-    const formData = new FormData(myForm);
-    console.log('formData ', [...formData.entries]);
-    // using fetch API to send form data to Netlify
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then((response) => {
-        setIsSubmitted(true);
-        console.log('Form Successfully Submitted');
-      })
-      .catch((error) => console.log(error));
   };
 
   useEffect(() => {
@@ -82,6 +80,7 @@ export default function Modal() {
               action='/success'
               netlify
               ref={formRef}
+              onSubmit={(e) => handleSubmit(e)}
             >
               <input type='hidden' name='form-name' value='ClientMessages' />
               <label htmlFor='Name'>Your Name</label>
