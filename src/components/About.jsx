@@ -4,7 +4,7 @@ import { useGlobalContext } from '../context';
 import Modal from './Modal';
 
 export default function About() {
-  const { light, isModalOpen, openModal } = useGlobalContext();
+  const { light, isModalOpen, openModal, isSubmitted } = useGlobalContext();
   return (
     <section className='about' aria-label='About Me'>
       <article className='about-intro-wrapper'>
@@ -25,7 +25,15 @@ export default function About() {
         </div>
         <div className='about-modal'>
           <button
-            className={light ? ' modal-light-btn' : 'modal-dark-btn'}
+            className={
+              light && !isSubmitted
+                ? 'modal-light-btn'
+                : light && isSubmitted
+                ? 'btn-disabled'
+                : !light && !isSubmitted
+                ? 'modal-dark-btn'
+                : 'btn-disabled'
+            }
             onClick={openModal}
           >
             Message Me
@@ -36,7 +44,7 @@ export default function About() {
         <img src={hero} className='about-hero-image' alt='' />
       </article>
 
-      {isModalOpen && <Modal />}
+      {isModalOpen && !isSubmitted && <Modal />}
     </section>
   );
 }

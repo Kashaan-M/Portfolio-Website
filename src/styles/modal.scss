@@ -35,6 +35,15 @@
     color: $clr-black;
   }
 }
+.btn-disabled,
+.btn-disabled:hover {
+  @extend .modal-light-btn;
+  background: $clr-grey-10;
+  color: $clr-grey-8;
+}
+.btn-disabled:active {
+  transform: scale(100%);
+}
 
 .modal-close-btn {
   align-self: flex-end;

@@ -7,23 +7,30 @@ export default function Modal() {
   const {
     isModalOpen,
     closeModal,
+    isSubmitted,
+    setIsSubmitted,
     submitter,
     setSubmitter,
     showAlert,
     setShowAlert,
   } = useGlobalContext();
   const formRef = useRef();
+  const nameRef = useRef();
+  const emailRef = useRef();
+  const messageRef = useRef();
+  const btnRef = useRef();
 
   useEffect(() => {
     const form = formRef.current;
     form.addEventListener('submit', handleSubmit);
 
     return () => form.removeEventListener('submit', handleSubmit);
-  }, []);
+  }, [isSubmitted]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setShowAlert(true);
+    disableSubmission();
     const myForm = e.target;
     const formData = new FormData(myForm);
     fetch('/', {
@@ -32,6 +39,7 @@ export default function Modal() {
       body: new URLSearchParams(formData).toString(),
     })
       .then((response) => {
+        setIsSubmitted(true);
         console.log('Form Successfully Submitted');
       })
       .catch((error) => console.log(error));
@@ -45,6 +53,12 @@ export default function Modal() {
     return () => clearTimeout(timeout);
   }, [showAlert]);
 
+  const disableSubmission = () => {
+    nameRef.current.disabled = true;
+    emailRef.current.disabled = true;
+    messageRef.current.disabled = true;
+    btnRef.current.disabled = true;
+  };
   return (
     <>
       <article
@@ -74,6 +88,7 @@ export default function Modal() {
                 id='Name'
                 maxLength='20'
                 onChange={(e) => setSubmitter(e.target.value)}
+                ref={nameRef}
                 required
               />
               <label htmlFor='Email'>Your Email</label>
@@ -81,6 +96,7 @@ export default function Modal() {
                 type='email'
                 name='Email'
                 id='Email'
+                ref={emailRef}
                 required
                 aria-describedby='emailHelp'
               />
@@ -93,9 +109,14 @@ export default function Modal() {
                 id='Message'
                 rows='3'
                 style={{ resize: 'none' }}
+                ref={messageRef}
                 required
               ></textarea>
-              <button type='submit' className='modal-light-btn'>
+              <button
+                type='submit'
+                className={isSubmitted ? 'btn-disabled' : 'modal-light-btn'}
+                ref={btnRef}
+              >
                 Send
               </button>
             </form>
