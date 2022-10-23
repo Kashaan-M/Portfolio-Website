@@ -84,7 +84,6 @@ export default function Modal() {
               action='/success'
               netlify
               ref={formRef}
-              onSubmit={(e) => handleSubmit(e)}
             >
               <input type='hidden' name='form-name' value='ClientMessages' />
               <label htmlFor='userName'>Your Name</label>
