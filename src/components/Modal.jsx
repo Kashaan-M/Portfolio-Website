@@ -36,7 +36,7 @@ export default function Modal() {
         })
         .catch((error) => console.log(error));
     }
-  }, []);
+  }, [isSubmitted]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
