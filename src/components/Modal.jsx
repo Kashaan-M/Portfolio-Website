@@ -21,29 +21,32 @@ export default function Modal() {
   const btnRef = useRef();
 
   useEffect(() => {
-    if (isSubmitted) {
-      const myForm = formRef.current;
-      const formData = new FormData(myForm);
-      const dataValues = [...formData.entries];
-      console.log('formData ', dataValues);
-      // using fetch API to send form data to Netlify
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData).toString(),
-      })
-        .then((response) => {
-          console.log('Form Successfully Submitted');
-        })
-        .catch((error) => console.log(error));
-    }
-  }, [isSubmitted]);
+    const form = formRef.current;
+    form.addEventListener('submit', handleSubmit);
+    return () => {
+      form.removeEventListener('submit', handleSubmit);
+    };
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitted(true);
     disableSubmission();
     setShowAlert(true);
+    const myForm = e.target;
+    const formData = new FormData(myForm);
+    const values = [...formData.entries()];
+    console.log('formData ', values);
+    // using fetch API to send form data to Netlify
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then((response) => {
+        console.log('Form Successfully Submitted');
+      })
+      .catch((error) => console.log(error));
   };
 
   useEffect(() => {
