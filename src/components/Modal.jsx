@@ -54,9 +54,9 @@ export default function Modal() {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
         'form-name': 'ClientMessages',
-        name: 'Ali',
-        email: 'Azmat',
-        message: 'Aloha',
+        name: submitter,
+        email: submitterEmail,
+        message: submitterMessage,
       }),
     })
       .then((response) => {
@@ -98,7 +98,6 @@ export default function Modal() {
               name='ClientMessages'
               method='POST'
               action='/success'
-              onSubmit={(e) => handleSubmit(e)}
               netlify
               ref={formRef}
             >
