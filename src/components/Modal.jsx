@@ -25,12 +25,12 @@ export default function Modal() {
     form.addEventListener('submit', handleSubmit);
 
     return () => form.removeEventListener('submit', handleSubmit);
-  }, []);
+  }, [isSubmitted]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setShowAlert(true);
     disableSubmission();
+    setShowAlert(true);
     const myForm = e.target;
     const formData = new FormData(myForm);
     // using fetch API to send form data to Netlify
@@ -52,7 +52,7 @@ export default function Modal() {
     }, 4000);
 
     return () => clearTimeout(timeout);
-  }, []);
+  }, [showAlert]);
 
   const disableSubmission = () => {
     nameRef.current.disabled = true;
@@ -60,6 +60,7 @@ export default function Modal() {
     messageRef.current.disabled = true;
     btnRef.current.disabled = true;
   };
+
   return (
     <>
       <article
@@ -97,8 +98,8 @@ export default function Modal() {
                 type='email'
                 name='Email'
                 id='Email'
-                ref={emailRef}
                 required
+                ref={emailRef}
                 aria-describedby='emailHelp'
               />
               <div id='emailHelp'>
@@ -115,8 +116,8 @@ export default function Modal() {
               ></textarea>
               <button
                 type='submit'
-                className={isSubmitted ? 'btn-disabled' : 'modal-light-btn'}
                 ref={btnRef}
+                className={isSubmitted ? 'btn-disabled' : 'modal-light-btn'}
               >
                 Send
               </button>
