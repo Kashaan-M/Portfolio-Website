@@ -83,22 +83,22 @@ export default function Modal() {
               onSubmit={(e) => handleSubmit(e)}
             >
               <input type='hidden' name='form-name' value='ClientMessages' />
-              <label htmlFor='Name'>Your Name</label>
+              <label htmlFor='userName'>Your Name</label>
               <input
                 type='text'
                 value={submitter}
-                name='Name'
-                id='Name'
+                name='userName'
+                id='userName'
                 maxLength='20'
                 onChange={(e) => setSubmitter(e.target.value)}
                 ref={nameRef}
                 required
               />
-              <label htmlFor='Email'>Your Email</label>
+              <label htmlFor='userEmail'>Your Email</label>
               <input
                 type='email'
-                name='Email'
-                id='Email'
+                name='userEmail'
+                id='userEmail'
                 required
                 ref={emailRef}
                 aria-describedby='emailHelp'
@@ -106,10 +106,10 @@ export default function Modal() {
               <div id='emailHelp'>
                 Your Email won't get shared with anyone else
               </div>
-              <label htmlFor='Message'>Your Message</label>
+              <label htmlFor='userMessage'>Your Message</label>
               <textarea
-                name='Message'
-                id='Message'
+                name='userMessage'
+                id='userMessage'
                 rows='3'
                 style={{ resize: 'none' }}
                 ref={messageRef}
