@@ -25,7 +25,7 @@ export default function Modal() {
     form.addEventListener('submit', handleSubmit);
 
     return () => form.removeEventListener('submit', handleSubmit);
-  }, [isSubmitted]);
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
