@@ -10,6 +10,7 @@ export default function Certificates() {
         <h2 className='certificates-text'>
           These are some Project-based Certifications I've Earned
         </h2>
+        <p>Click on a certificate to find out more</p>
         <div className='certificates-container'>
           <div className='certificate'>
             <a href='https://www.freecodecamp.org/certification/kashaan_mahmood/responsive-web-design'>
@@ -33,11 +34,7 @@ export default function Certificates() {
 
           <div className='certificate'>
             <a href='https://www.coursera.org/verify/6Q7YD%20PAGSYVT'>
-              <img
-                src={python}
-                alt='Python Programming Certificate'
-                className='certificate-img'
-              />
+              <img src={python} alt='Python Programming Certificate' className='certificate-img' />
             </a>
           </div>
         </div>

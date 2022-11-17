@@ -23,7 +23,7 @@ export default function About() {
             I am Kashaan
           </h1>
           <h2 className='about-intro-h3' style={{ textAlign: 'center' }}>
-            a Front End Developer
+            a Full Stack JavaScript Developer
           </h2>
         </div>
         <div className='about-modal'>

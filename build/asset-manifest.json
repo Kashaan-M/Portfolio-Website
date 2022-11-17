@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.061e9abf.css",
-    "main.js": "./static/js/main.55e3bbf7.js",
+    "main.js": "./static/js/main.d7990f8c.js",
     "static/media/Python-for-Everybody.png": "./static/media/Python-for-Everybody.00e3c162f549975136ef.png",
     "static/media/technical-documentation-page.png": "./static/media/technical-documentation-page.3820071ac468f7eaf6cd.png",
     "static/media/data-visualization-bar-chart-d3js.png": "./static/media/data-visualization-bar-chart-d3js.bee92edd43294571b474.png",
@@ -12,16 +12,23 @@
     "static/media/color-generator-app-kashaan-mahmood.png": "./static/media/color-generator-app-kashaan-mahmood.8febfb0e6cc9a81fab6a.png",
     "static/media/survey-form.png": "./static/media/survey-form.3270357bd5be998192d4.png",
     "static/media/javascript-algorithms-and-data-structures.png": "./static/media/javascript-algorithms-and-data-structures.33bf13141fc58ec61927.png",
+    "static/media/local library.png": "./static/media/local library.397fa26328f5b82d5340.png",
     "static/media/personal-portfolio-website-old.png": "./static/media/personal-portfolio-website-old.e549e686ef9deed89194.png",
     "static/media/responsive-design-certification.png": "./static/media/responsive-design-certification.d9d4448b2b6795a42905.png",
+    "static/media/Cyclists-Doping-Scatter-Plot-Graph.png": "./static/media/Cyclists-Doping-Scatter-Plot-Graph.164efc18b3ae2c2e1f30.png",
     "static/media/random-quotes-machine.png": "./static/media/random-quotes-machine.b200b01377a0d031cffb.png",
     "static/media/kashaan-logo-light-optimized.svg": "./static/media/kashaan-logo-light-optimized.8a37c04454039e156a28a0b9aa2bdf69.svg",
     "static/media/kashaan-logo-dark-optimized.svg": "./static/media/kashaan-logo-dark-optimized.75dc93bc248f6e37b21467d5c843cfb1.svg",
+    "static/media/mongo_db.svg": "./static/media/mongo_db.b508609b24c1a2bc58576411df58bb4b.svg",
     "static/media/jquery.svg": "./static/media/jquery.cc0fdff987e7691e85803bda1849e75d.svg",
     "static/media/sass-original.svg": "./static/media/sass-original.61ff4716fda0d4df86d2a11609fb07ac.svg",
+    "static/media/pugpugjs.svg": "./static/media/pugpugjs.8e81a8ae97e861a529aa213bd7533943.svg",
+    "static/media/mongoose.svg": "./static/media/mongoose.e31757079b5965b571bd1b5682d7afe7.svg",
     "static/media/linux-plain.svg": "./static/media/linux-plain.79c2b84751841a242bc3cd9494c3ff91.svg",
+    "static/media/express_js.svg": "./static/media/express_js.493a0dd08d8d77a341e2d22676607a29.svg",
     "static/media/react-original.svg": "./static/media/react-original.32734377991340167eba85e6a5327af5.svg",
     "static/media/python-original.svg": "./static/media/python-original.3703c35aa285e19eec8d5f69214c6c5e.svg",
+    "static/media/eslint.svg": "./static/media/eslint.eb05f60722910c0e70b5d9f80bc3fecc.svg",
     "static/media/bootstrap-original.svg": "./static/media/bootstrap-original.5c9563944a243f7b73f2e81194c0b1b1.svg",
     "static/media/bash-original.svg": "./static/media/bash-original.1585ac36100c0ed804b8bedf497dff9b.svg",
     "static/media/nodejs-original.svg": "./static/media/nodejs-original.8bae75f411b0a02e3ba49967b2c120cb.svg",
@@ -40,10 +47,10 @@
     "static/media/npm-original-wordmark.svg": "./static/media/npm-original-wordmark.8ced62565fa176ca792d5ceab67e9a04.svg",
     "static/media/x-lg.svg": "./static/media/x-lg.f520e54c746f7505bec401e45a68a2de.svg",
     "main.061e9abf.css.map": "./static/css/main.061e9abf.css.map",
-    "main.55e3bbf7.js.map": "./static/js/main.55e3bbf7.js.map"
+    "main.d7990f8c.js.map": "./static/js/main.d7990f8c.js.map"
   },
   "entrypoints": [
     "static/css/main.061e9abf.css",
-    "static/js/main.55e3bbf7.js"
+    "static/js/main.d7990f8c.js"
   ]
 }
