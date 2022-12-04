@@ -121,7 +121,7 @@ export const projects = [
   {
     id: 1,
     text: 'Local Library ( Dynamic Website )',
-    url: 'locallibrary-kashaan.up.railway.app/',
+    url: 'https://locallibrary-kashaan.up.railway.app/',
     img: require('./assets/local library.png'),
   },
   {
