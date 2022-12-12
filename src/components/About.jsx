@@ -4,19 +4,14 @@ import { useGlobalContext } from '../context';
 import Modal from './Modal';
 
 export default function About() {
-  const { light, isModalOpen, openModal, isSubmitted, clicked, setClicked } =
-    useGlobalContext();
+  const { light, isModalOpen, openModal, isSubmitted, clicked, setClicked } = useGlobalContext();
   const click = clicked === 1;
   const freshModal = isModalOpen && click;
   return (
     <section className='about' aria-label='About Me'>
       <article className='about-intro-wrapper'>
         <div className='about-intro'>
-          <h3
-            className='about-intro-h3 about-intro-urdu'
-            dir='rtl'
-            style={{ textAlign: 'center' }}
-          >
+          <h3 className='about-intro-h3 about-intro-urdu' dir='rtl' style={{ textAlign: 'center' }}>
             السلام علیکم
           </h3>
           <h1 className='about-intro-h2' style={{ textAlign: 'center' }}>
@@ -37,8 +32,7 @@ export default function About() {
                 ? 'modal-dark-btn'
                 : 'btn-disabled'
             }
-            onClick={openModal}
-          >
+            onClick={openModal}>
             Message Me
           </button>
         </div>
