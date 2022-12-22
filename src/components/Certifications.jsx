@@ -2,6 +2,7 @@ import React from 'react';
 import python from '../assets/Python-for-Everybody.png';
 import responsive from '../assets/responsive-design-certification.png';
 import js from '../assets/javascript-algorithms-and-data-structures.png';
+import backend from '../assets/backend-development-and-apis-certification.png';
 
 export default function Certificates() {
   return (
@@ -27,6 +28,16 @@ export default function Certificates() {
               <img
                 src={js}
                 alt='JavaScript Algorithms and Data Structures Certificate'
+                className='certificate-img'
+              />
+            </a>
+          </div>
+
+          <div className='certificate'>
+            <a href='https://www.freecodecamp.org/certification/Kashaan_Mahmood/back-end-development-and-apis'>
+              <img
+                src={backend}
+                alt='Backend Development and APIs Certificate'
                 className='certificate-img'
               />
             </a>
