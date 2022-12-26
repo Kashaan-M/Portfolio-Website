@@ -216,70 +216,74 @@ export const techStack = [
   },
   {
     id: 5,
-    text: 'Node JS',
+    text: 'Redux',
   },
   {
     id: 6,
-    text: 'NPM',
+    text: 'Node JS',
   },
   {
     id: 7,
-    text: 'Express JS',
+    text: 'NPM',
   },
   {
     id: 8,
-    text: 'Pug JS',
+    text: 'Express JS',
   },
   {
     id: 9,
-    text: 'MongoDB',
+    text: 'Pug JS',
   },
   {
     id: 10,
-    text: 'Mongoose',
+    text: 'MongoDB',
   },
   {
     id: 11,
-    text: 'Webpack',
+    text: 'Mongoose',
   },
   {
     id: 12,
-    text: 'Git',
+    text: 'Webpack',
   },
   {
     id: 13,
-    text: 'GitHub',
+    text: 'Git',
   },
   {
     id: 14,
-    text: 'ESLint',
+    text: 'GitHub',
   },
   {
     id: 15,
-    text: 'Visual Studio Code',
+    text: 'ESLint',
   },
   {
     id: 16,
-    text: 'BootStrap 5',
+    text: 'Visual Studio Code',
   },
   {
     id: 17,
-    text: 'jQuery',
+    text: 'BootStrap 5',
   },
   {
     id: 18,
-    text: 'Linux',
+    text: 'jQuery',
   },
   {
     id: 19,
-    text: 'Terminal',
+    text: 'Linux',
   },
   {
     id: 20,
-    text: 'NeoVim',
+    text: 'Terminal',
   },
   {
     id: 21,
+    text: 'NeoVim',
+  },
+  {
+    id: 22,
     text: 'Python 3',
   },
 ];

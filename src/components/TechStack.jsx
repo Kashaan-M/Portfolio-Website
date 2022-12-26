@@ -5,6 +5,7 @@ import css from '../assets/css3-original.svg';
 import sass from '../assets/sass-original.svg';
 import js from '../assets/javascript-original.svg';
 import react from '../assets/react-original.svg';
+import redux from '../assets/redux.svg';
 import node from '../assets/nodejs-original.svg';
 import npm from '../assets/npm-original-wordmark.svg';
 import express from '../assets/express_js.svg';
@@ -29,6 +30,7 @@ const stack = [
   sass,
   js,
   react,
+  redux,
   node,
   npm,
   express,
