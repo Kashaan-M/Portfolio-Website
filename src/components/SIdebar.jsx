@@ -20,31 +20,18 @@ export default function Sidebar() {
   }, [closeSidebar]);
   return (
     <>
-      <div
-        className={isSidebarOpen ? 'sidebar-overlay' : 'none'}
-        ref={overlayRef}
-      ></div>
+      <div className={isSidebarOpen ? 'sidebar-overlay' : 'none'} ref={overlayRef}></div>
       <aside
         className={isSidebarOpen ? 'sidebar show-sidebar' : 'sidebar'}
         style={{ background: light ? '#ffffff' : '#000000' }}
-        aria-label='Sidebar'
-      >
-        <div
-          className='sidebar-header'
-          role='region'
-          aria-label='logo and sidebar close button'
-        >
-          <img
-            src={light ? darkLogo : lightLogo}
-            className='sidebar-logo'
-            alt='Kashaan'
-          />
+        aria-label='Sidebar'>
+        <div className='sidebar-header' role='region' aria-label='logo and sidebar close button'>
+          <img src={light ? darkLogo : lightLogo} className='sidebar-logo' alt='Kashaan' />
           <button
             className='sidebar-close-btn'
             onClick={closeSidebar}
             style={{ color: light ? '#222222' : '#f1f5f8' }}
-            aria-label='Close Sidebar'
-          >
+            aria-label='Close Sidebar'>
             <img src={closeBtn} alt='' width={30} height={25} />
           </button>
         </div>
@@ -78,18 +65,11 @@ export default function Sidebar() {
                 height='25'
                 id='svg_0'
                 xmlns='http://www.w3.org/2000/svg'
-                fill='currentColor'
-              >
+                fill='currentColor'>
                 <g>
                   <title>fiverr profile</title>
                   <g id='svg_4'>
-                    <circle
-                      id='svg_1'
-                      fill='currentColor'
-                      r='12.34334'
-                      cy='12.5'
-                      cx='15'
-                    />
+                    <circle id='svg_1' fill='currentColor' r='12.34334' cy='12.5' cx='15' />
                     <circle
                       id='svg_2'
                       r='1.30572'
@@ -105,6 +85,11 @@ export default function Sidebar() {
                   </g>
                 </g>
               </svg>
+            </a>
+          </li>
+          <li key='4' aria-label='My blog'>
+            <a href='https://kashaan-m.github.io/blog' target='_blank' rel='noreferrer'>
+              My Blog
             </a>
           </li>
         </ul>

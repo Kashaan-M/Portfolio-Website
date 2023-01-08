@@ -73,7 +73,8 @@
     padding-bottom: 2rem;
 
     & a {
-      font-size: 1.5rem;
+      font-size: 1rem;
+      font-weight: bold;
       margin: 0 0.5rem;
       transition: $transition;
       & svg {
