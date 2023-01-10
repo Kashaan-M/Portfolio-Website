@@ -121,13 +121,13 @@ export const projects = [
   {
     id: 1,
     text: 'Jobs Api (REST API)',
-    url: 'https://jobs-api-kashaan.up.railway.app/',
+    url: 'jobs-api-production-d372.up.railway.app',
     img: require('./assets/jobs-api.png'),
   },
   {
     id: 2,
     text: 'Local Library ( Dynamic Website )',
-    url: 'https://locallibrary-kashaan.up.railway.app/',
+    url: 'https://express-locallibrary-production-3678.up.railway.app/',
     img: require('./assets/local library.png'),
   },
   {
