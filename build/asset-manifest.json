@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.b3d2a752.css",
-    "main.js": "./static/js/main.732945c9.js",
+    "main.js": "./static/js/main.3b3eb736.js",
     "static/js/904.abae7d3b.chunk.js": "./static/js/904.abae7d3b.chunk.js",
     "static/js/650.473c4af7.chunk.js": "./static/js/650.473c4af7.chunk.js",
     "static/js/691.fe324546.chunk.js": "./static/js/691.fe324546.chunk.js",
@@ -9,6 +9,7 @@
     "static/js/642.36143b37.chunk.js": "./static/js/642.36143b37.chunk.js",
     "static/js/784.daed9cb8.chunk.js": "./static/js/784.daed9cb8.chunk.js",
     "static/media/Python-for-Everybody.png": "./static/media/Python-for-Everybody.00e3c162f549975136ef.png",
+    "static/media/wakanda-landing-page.png": "./static/media/wakanda-landing-page.81874be6aa96e42f9c87.png",
     "static/media/technical-documentation-page.png": "./static/media/technical-documentation-page.3820071ac468f7eaf6cd.png",
     "static/media/data-visualization-bar-chart-d3js.png": "./static/media/data-visualization-bar-chart-d3js.bee92edd43294571b474.png",
     "static/media/hero-optimized.svg": "./static/media/hero-optimized.f2e9d8aa51bd7e1338ba813495a9b13e.svg",
@@ -56,7 +57,7 @@
     "static/media/npm-original-wordmark.svg": "./static/media/npm-original-wordmark.8ced62565fa176ca792d5ceab67e9a04.svg",
     "static/media/x-lg.svg": "./static/media/x-lg.f520e54c746f7505bec401e45a68a2de.svg",
     "main.b3d2a752.css.map": "./static/css/main.b3d2a752.css.map",
-    "main.732945c9.js.map": "./static/js/main.732945c9.js.map",
+    "main.3b3eb736.js.map": "./static/js/main.3b3eb736.js.map",
     "904.abae7d3b.chunk.js.map": "./static/js/904.abae7d3b.chunk.js.map",
     "650.473c4af7.chunk.js.map": "./static/js/650.473c4af7.chunk.js.map",
     "691.fe324546.chunk.js.map": "./static/js/691.fe324546.chunk.js.map",
@@ -66,6 +67,6 @@
   },
   "entrypoints": [
     "static/css/main.b3d2a752.css",
-    "static/js/main.732945c9.js"
+    "static/js/main.3b3eb736.js"
   ]
 }
