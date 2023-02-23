@@ -218,19 +218,19 @@ export const techStack = [
   },
   {
     id: 4,
-    text: 'React JS 18',
+    text: 'React JS',
   },
   {
     id: 5,
-    text: 'Redux',
+    text: 'Next JS',
   },
   {
     id: 6,
-    text: 'Node JS',
+    text: 'Redux',
   },
   {
     id: 7,
-    text: 'NPM',
+    text: 'Node JS',
   },
   {
     id: 8,
@@ -262,11 +262,11 @@ export const techStack = [
   },
   {
     id: 15,
-    text: 'ESLint',
+    text: 'Figma',
   },
   {
     id: 16,
-    text: 'Visual Studio Code',
+    text: 'Tailwind CSS',
   },
   {
     id: 17,
@@ -274,22 +274,14 @@ export const techStack = [
   },
   {
     id: 18,
-    text: 'jQuery',
+    text: 'Bash Scripting',
   },
   {
     id: 19,
-    text: 'Linux',
-  },
-  {
-    id: 20,
-    text: 'Terminal',
-  },
-  {
-    id: 21,
     text: 'NeoVim',
   },
   {
-    id: 22,
+    id: 20,
     text: 'Python 3',
   },
 ];
@@ -308,11 +300,6 @@ export const contact = [
   {
     id: 2,
     text: 'kashaanmahmood@gmail.com',
-    url: '#',
-  },
-  {
-    id: 3,
-    text: '+92344 0507057',
     url: '#',
   },
 ];

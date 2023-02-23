@@ -8,17 +8,19 @@ import lightLogo from '../assets/kashaan-logo-light-optimized.svg';
 import Sidebar from './SIdebar';
 
 export default function Navbar() {
-  const { light, openSidebar } = useGlobalContext();
+  const { light, openSidebar, isSubmitted } = useGlobalContext();
   const headerRef = useRef();
 
   useEffect(() => {
     if (!light) {
       document.body.classList.add('dark-theme');
-      headerRef.current.parentElement.parentElement.style.background = '#222222';
+      headerRef.current.parentElement.parentElement.style.background =
+        '#222222';
       document.body.classList.remove('light-theme');
     } else {
       document.body.classList.add('light-theme');
-      headerRef.current.parentElement.parentElement.style.background = '#f1f5f8';
+      headerRef.current.parentElement.parentElement.style.background =
+        '#f1f5f8';
       document.body.classList.remove('dark-theme');
     }
   }, [light]);
@@ -28,10 +30,16 @@ export default function Navbar() {
       <header ref={headerRef}>
         <nav className='section'>
           <div className='nav-center' role='region' aria-label='Navbar'>
-            <div className='nav-header' role='region' aria-label='Logo and Theme'>
+            <div
+              className='nav-header'
+              role='region'
+              aria-label='Logo and Theme'>
               <img src={light ? darkLogo : lightLogo} alt='Kashaan' />
               <Theme />
-              <button className='nav-toggle' onClick={openSidebar} aria-label='Open Sidebar'>
+              <button
+                className='nav-toggle'
+                onClick={openSidebar}
+                aria-label='Open Sidebar'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   width='30'
@@ -61,10 +69,14 @@ export default function Navbar() {
                 })}
               </ul>
             </div>
-            <div className='social-icons' role='region' aria-label='Social Links'>
+            <div
+              className='social-icons'
+              role='region'
+              aria-label='Social Links'>
               <a
                 href='https://kashaan-m.github.io/blog'
                 style={{ 'font-weight': 'bold' }}
+                className={'blog_button'}
                 target='_blank'
                 rel='noreferrer'>
                 My Blog
@@ -97,29 +109,6 @@ export default function Navbar() {
                   viewBox='0 0 16 16'>
                   <title>LinkedIn Profile</title>
                   <path d='M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z' />
-                </svg>
-              </a>
-              <a
-                href='https://www.fiverr.com/kashan_pakistan'
-                className='nav-anchor-link'
-                aria-label='Fiverr Profile'>
-                <svg width='30' height='25' xmlns='http://www.w3.org/2000/svg' fill='currentColor'>
-                  <g>
-                    <title>fiverr profile</title>
-                    <g>
-                      <circle fill='currentColor' r='12.34334' cy='12.5' cx='15' />
-                      <circle
-                        r='1.30572'
-                        fill={light ? '#f1f5f8' : '#222'}
-                        cy='8.0381'
-                        cx='18.01088'
-                      />
-                      <path
-                        fill={light ? '#f1f5f8' : '#222'}
-                        d='m19.37491,10.20005l-5.97705,0l0,-0.39167c0,-0.76924 0.76924,-0.78382 1.16091,-0.78382c0.44949,0 0.6531,0.04373 0.6531,0.04373l0,-2.1187a7.54227,7.54227 0 0 0 -0.95779,-0.05783c-1.24789,0 -3.55513,0.34793 -3.55513,2.98901l0,0.33578l-1.0885,0l0,1.95882l1.0885,0l0,4.13534l-1.01561,0l0,1.95882l4.90361,0l0,-1.96077l-1.19007,0l0,-4.13534l3.26308,0l0,4.13534l-1.01416,0l0,1.95882l4.7452,0l0,-1.95882l-1.0161,0l0,-6.10874z'
-                      />
-                    </g>
-                  </g>
                 </svg>
               </a>
             </div>

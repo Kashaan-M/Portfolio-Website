@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkportfolio_site=self.webpackChunkportfolio_site||[]).push([[466],{5466:function(e,t,n){n.r(t),n.d(t,{default:function(){return s}});n(5745);var r=n(4143);function s(){return(0,r.jsx)(r.Fragment,{children:(0,r.jsx)("footer",{style:{display:"flex",justifyContent:"center",margin:"2rem 0 1rem 0"},children:(0,r.jsx)("span",{style:{textAlign:"center"},children:"\xa9 Kashaan Mahmood. All Rights Reserved"})})})}}}]);
+//# sourceMappingURL=466.4324fe7b.chunk.js.map

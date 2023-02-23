@@ -3,7 +3,6 @@
   grid-template-columns: auto 1fr auto auto;
   margin: 1rem 0;
   place-items: center;
-
   & .nav-header {
     display: flex;
     flex-direction: row;
@@ -142,6 +141,13 @@ body.dark-theme {
   & .nav-anchor-link:hover {
     color: $clr-primary-6;
   }
+  & .blog_button {
+    background-color: $clr-grey-10;
+    color: $clr-black;
+    &:hover {
+      background-color: $clr-grey-8;
+    }
+  }
 }
 
 body.light-theme {
@@ -159,4 +165,17 @@ body.light-theme {
   & .nav-anchor-link:hover {
     color: $clr-primary-7;
   }
+  & .blog_button {
+    background-color: $clr-black;
+    color: $clr-white;
+    &:hover {
+      background-color: $clr-dark-grey;
+    }
+  }
+}
+
+/* Blog Button */
+.blog_button {
+  padding: 0.5rem 0.75rem;
+  border-radius: 2rem;
 }
