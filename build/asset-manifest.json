@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.8d98206b.css",
-    "main.js": "./static/js/main.8f2e8dd5.js",
+    "main.js": "./static/js/main.b488c8f0.js",
     "static/js/521.94c9cd69.chunk.js": "./static/js/521.94c9cd69.chunk.js",
     "static/js/928.951594a1.chunk.js": "./static/js/928.951594a1.chunk.js",
     "static/js/12.b2b732c4.chunk.js": "./static/js/12.b2b732c4.chunk.js",
@@ -12,6 +12,8 @@
     "static/media/wakanda-landing-page.png": "./static/media/wakanda-landing-page.81874be6aa96e42f9c87.png",
     "static/media/technical-documentation-page.png": "./static/media/technical-documentation-page.3820071ac468f7eaf6cd.png",
     "static/media/data-visualization-bar-chart-d3js.png": "./static/media/data-visualization-bar-chart-d3js.bee92edd43294571b474.png",
+    "static/media/friendly-chat.png": "./static/media/friendly-chat.c05fd0db46a5dc9f2310.png",
+    "static/media/easy-arabic-grammar.webp": "./static/media/easy-arabic-grammar.9bf5202c05d0ad08a10d.webp",
     "static/media/hero-optimized.svg": "./static/media/hero-optimized.f2e9d8aa51bd7e1338ba813495a9b13e.svg",
     "static/media/unit-conversion-webapp.png": "./static/media/unit-conversion-webapp.8cf32be6ac0f00d6f53b.png",
     "static/media/product-landing-page.png": "./static/media/product-landing-page.a6bf3d73e58c9213e583.png",
@@ -55,7 +57,7 @@
     "static/media/envelope.svg": "./static/media/envelope.ceed57e9483391a79813f313693eb103.svg",
     "static/media/x-lg.svg": "./static/media/x-lg.f520e54c746f7505bec401e45a68a2de.svg",
     "main.8d98206b.css.map": "./static/css/main.8d98206b.css.map",
-    "main.8f2e8dd5.js.map": "./static/js/main.8f2e8dd5.js.map",
+    "main.b488c8f0.js.map": "./static/js/main.b488c8f0.js.map",
     "521.94c9cd69.chunk.js.map": "./static/js/521.94c9cd69.chunk.js.map",
     "928.951594a1.chunk.js.map": "./static/js/928.951594a1.chunk.js.map",
     "12.b2b732c4.chunk.js.map": "./static/js/12.b2b732c4.chunk.js.map",
@@ -65,6 +67,6 @@
   },
   "entrypoints": [
     "static/css/main.8d98206b.css",
-    "static/js/main.8f2e8dd5.js"
+    "static/js/main.b488c8f0.js"
   ]
 }
