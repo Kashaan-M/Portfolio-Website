@@ -120,95 +120,77 @@ export const social = [
 export const projects = [
   {
     id: 1,
+    text: 'Bakery App - (React, Firebase)',
+    url: 'https://teesri-app.firebaseapp.com',
+    img: require('./assets/bakery-app-firebase.webp'),
+  },
+  {
+    id: 2,
     text: 'Friendly Chat - Firebase App (beginner)',
     url: 'https://friendlychat-769ad.web.app/',
     img: require('./assets/friendly-chat.png'),
   },
   {
-    id: 2,
+    id: 3,
     text: 'Easy Arabic Grammar (Static Website)',
     url: 'https://easyarabicgrammar.netlify.app/',
     img: require('./assets/easy-arabic-grammar.webp'),
   },
 
   {
-    id: 3,
+    id: 4,
     text: 'Wakanda Landing Page',
     url: 'https://wakanda-page.vercel.app/',
     img: require('./assets/wakanda-landing-page.png'),
   },
   {
-    id: 4,
+    id: 5,
     text: 'Jobs Api (REST API)',
     url: 'jobs-api-production-d372.up.railway.app',
     img: require('./assets/jobs-api.png'),
   },
   {
-    id: 5,
+    id: 6,
     text: 'Local Library ( Dynamic Website )',
     url: 'https://express-locallibrary-production-3678.up.railway.app/',
     img: require('./assets/local library.png'),
   },
   {
-    id: 6,
+    id: 7,
     text: 'U.S. GDP Visualization',
     url: 'https://kashaan-m.github.io/GDP-Bar-Chart/dist/',
     img: require('./assets/data-visualization-bar-chart-d3js.png'),
   },
 
   {
-    id: 7,
+    id: 8,
     text: 'Color Generator App',
     url: 'https://color-generator-app-kashaan.netlify.app/',
     img: require('./assets/color-generator-app-kashaan-mahmood.png'),
   },
   {
-    id: 8,
+    id: 9,
     text: "Cyclist's Doping Scatter Plot",
     url: 'https://kashaan-m.github.io/d3-cyclists-scatter-plot/dist/',
     img: require('./assets/Cyclists-Doping-Scatter-Plot-Graph.png'),
   },
   {
-    id: 9,
+    id: 10,
     text: 'Markdown Previewer App',
     url: 'https://markdown-previewer-k.netlify.app/',
     img: require('./assets/markdown-previewer-app.png'),
   },
   {
-    id: 10,
+    id: 11,
     text: 'Random Quotes Machine',
     url: 'https://randomquotesmachine-k.netlify.app',
     img: require('./assets/random-quotes-machine.png'),
   },
   {
-    id: 11,
+    id: 12,
     text: 'Unit Converter App',
     url: 'https://unit-converter-webapp.netlify.app',
     img: require('./assets/unit-conversion-webapp.png'),
-  },
-  {
-    id: 12,
-    text: 'Survey Form',
-    url: 'https://codepen.io/kashaan-mahmood/pen/PopLBRb',
-    img: require('./assets/survey-form.png'),
-  },
-  {
-    id: 13,
-    text: 'Technical Documentation Page',
-    url: 'https://codepen.io/kashaan-mahmood/pen/eYemrgj',
-    img: require('./assets/technical-documentation-page.png'),
-  },
-  {
-    id: 14,
-    text: 'Product Landing Page',
-    url: 'https://codepen.io/kashaan-mahmood/pen/mdBGmjZ',
-    img: require('./assets/product-landing-page.png'),
-  },
-  {
-    id: 15,
-    text: 'Portfolio Website (old)',
-    url: 'https://kashaan-m.netlify.app',
-    img: require('./assets/personal-portfolio-website-old.png'),
   },
 ];
 
